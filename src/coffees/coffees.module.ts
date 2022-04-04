@@ -15,13 +15,7 @@ import { Connection } from 'typeorm';
         CoffeesService,
         {
             provide: COFFEE_BRANDS,
-            useFactory: async (connection: Connection): Promise<string[]> => {
-                //const coffeeBrands = await connection. .query('SELECT * ...;);
-                const coffeeBrands = await Promise.resolve(['buddy brew', 'nescae']);
-                console.log('[!] Async factory');
-                return coffeeBrands;
-           },
-           inject: [Connection],
+            useFactory: () => ['buddy brew', 'nescafe']
         },
     ],
     exports: [CoffeesService],

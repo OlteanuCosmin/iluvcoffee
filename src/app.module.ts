@@ -16,7 +16,7 @@ import { DatabaseModule } from './database/database.module';
     database: 'postgres',
     autoLoadEntities: true,
     synchronize: true,
-  }), CoffeeRatingModule, DatabaseModule],
+  }), CoffeeRatingModule],
   controllers: [AppController],
   providers: [AppService],
 })
